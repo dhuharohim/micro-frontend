@@ -48,20 +48,20 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
       },
-      {
-        name: 'Pie Chart',
-        identifier: 'pieChart',
-        type: 'pie',
-        data: [30, 40, 35, 50, 49],
-        categories: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
-      },
-      {
-        name: 'Donut Chart',
-        identifier: 'donutChart',
-        type: 'donut',
-        data: [30, 40, 35, 50, 49],
-        categories: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
-      },
+      // {
+      //   name: 'Pie Chart',
+      //   identifier: 'pieChart',
+      //   type: 'pie',
+      //   data: [30, 40, 35, 50, 49],
+      //   categories: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+      // },
+      // {
+      //   name: 'Donut Chart',
+      //   identifier: 'donutChart',
+      //   type: 'donut',
+      //   data: [30, 40, 35, 50, 49],
+      //   categories: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+      // },
     ];
   }
   
