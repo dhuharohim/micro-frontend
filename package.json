@@ -20,6 +20,7 @@
     "@angular/router": "^15.2.0",
     "apexcharts": "^3.45.0",
     "flowbite": "^2.2.1",
+    "ng-apexcharts": "^1.8.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
