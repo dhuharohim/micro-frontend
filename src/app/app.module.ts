@@ -16,7 +16,6 @@ import { PagesComponent } from './pages/pages.component';
   declarations: [
     AppComponent,
     SidebarComponent,
-    PagesComponent,
   ],
   imports: [
     BrowserModule,

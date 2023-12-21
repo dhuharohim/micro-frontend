@@ -4,10 +4,9 @@ import { ExtraOptions, RouterModule } from "@angular/router";
 import { Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProductsComponent } from './products/products.component';
-import { SidebarComponent } from '../layouts/sidebar/sidebar.component';
 import { HeaderComponent } from '../layouts/header/header.component';
 import { FooterComponent } from '../layouts/footer/footer.component';
+import { ProductsComponent } from './products/products.component';
 
 
 const routes: Routes = [
@@ -30,9 +29,10 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     DashboardComponent,
-    ProductsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent,
+    PagesComponent
   ],
   imports: [
     CommonModule,
