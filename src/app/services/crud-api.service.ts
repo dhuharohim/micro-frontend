@@ -17,7 +17,7 @@ export class CrudApiService {
     return from(axios.get(url));
   }
 
-  getOne(endpoint: string, id: number): Observable<any> {
+  getOne(endpoint: string, id: any): Observable<any> {
     return from(axios.get(`${this.apiUrl}/${endpoint}/${id}`));
   }
 
@@ -25,7 +25,7 @@ export class CrudApiService {
     return from(axios.post(`${this.apiUrl}/${endpoint}`, data));
   }
 
-  update(endpoint: string, id: number, data: any): Observable<any> {
+  update(endpoint: string, id: any, data: any): Observable<any> {
     return from(axios.put(`${this.apiUrl}/${endpoint}/${id}`, data));
   }
 

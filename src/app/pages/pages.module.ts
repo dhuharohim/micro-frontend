@@ -7,6 +7,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from '../layouts/header/header.component';
 import { FooterComponent } from '../layouts/footer/footer.component';
 import { ProductsComponent } from './products/products.component';
+import { CreateComponent } from './products/create/create.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './products/edit/edit.component';
 
 
 const routes: Routes = [
@@ -20,7 +23,20 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent
+        children: [
+          {
+            path: '',
+            component: ProductsComponent,
+          },
+          {
+            path: 'create',
+            component: CreateComponent
+          },
+          {
+            path: 'edit/:id',
+            component: EditComponent
+          }
+        ]
       }
     ]
   }
@@ -32,11 +48,14 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    PagesComponent
+    PagesComponent,
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
   ]
 })
 export class PagesModule { }
