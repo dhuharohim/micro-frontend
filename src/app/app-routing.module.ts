@@ -7,10 +7,14 @@ import { ExtraOptions, RouterModule } from "@angular/router";
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
     loadChildren: () => import("./pages/pages.module").then((m)=> m.PagesModule)
   },
-  { path: "", redirectTo: "dashboard", pathMatch: "full" },
-  { path: "**", redirectTo: "dashboard" },
+  { path: '**', redirectTo: "dashboard" },
 ]
 
 const config: ExtraOptions = {
