@@ -32,12 +32,14 @@ export class ProductsComponent {
 
   getData(): void {
     this.isLoading = true;
+    const startIndex = (this.currentPage - 1) * this.pageSize;
     this.apiService
       .getAllWithPagination('products', this.currentPage, this.pageSize)
       .subscribe(
         (response) => {
           this.products = response.data;
-          this.totalItems = response.totalItems;
+          this.totalItems = this.products.length;
+          this.products = this.products.slice(startIndex, startIndex + this.pageSize);
         },
         (error) => {
           alert(environment.default_error_message);
