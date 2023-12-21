@@ -23,7 +23,6 @@ export class ProductsComponent {
   currentPage = 1;
   pageSize = 5;
   totalItems = 0;
-  selectedId: number = 0;
 
   constructor(private apiService: CrudApiService) {}
 
@@ -70,8 +69,12 @@ export class ProductsComponent {
     return Math.ceil(this.totalItems / this.pageSize);
   }
 
-  deleteProduct(): void {
-    this.apiService.delete('products', this.selectedId).subscribe((response) => {
+  deleteProduct(productId: number): void {
+    if(!confirm('Are you sure you want to delete this product?')) {
+      return
+    }
+    
+    this.apiService.delete('products', productId).subscribe((response) => {
       alert('Product deleted successfully');
       this.getData();
     },
